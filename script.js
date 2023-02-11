@@ -1,5 +1,5 @@
 let mains=document.getElementsByTagName("main");
-let content=document.getElementById("apidata");
+let major=document.getElementById("apidata");
 let tb=document.getElementById("row");
 let bd=document.getElementsByTagName("body");
 fetch('https://dummyjson.com/products').then((apidata)=>{
@@ -12,11 +12,11 @@ return apidata.json();
     console.log(actualdata);
 
       
-      for(let i=0;i<30;i++)
+      for(let k=0;k<30;k++)
       {
        
          const mr=document.createElement("div");
-        const mydata=actualdata.products[i];
+        const mydata=actualdata.products[k];
       
          
    const cr=document.createElement("div");
@@ -37,11 +37,12 @@ return apidata.json();
      
   
       <br>
-      The name of id is ${mydata.id} mydata
+       id is ${mydata.id} 
       
 
-
-
+  <br>
+      
+Rating -${mydata.rating}
       
       `
     //  cr.style.display="flex";
@@ -58,11 +59,11 @@ return apidata.json();
 
        
     //mains.append(cr);
-    content.append(cr);
+    major.append(cr);
     //content.style.display="flex";
-    content.style.flexWrap="wrap";
-    content.style.flexDirection="column";
-  content.style.justifyContent="space-evenly";
+    major.style.flexWrap="wrap";
+    major.style.flexDirection="column";
+  major.style.justifyContent="space-evenly";
 
     //SVGTextContentElement.
   //content.style.flexDirection="";
@@ -88,5 +89,5 @@ return apidata.json();
 }).catch((error)=>{
 
 
-    console.log(`the error: ${error}`);
+    console.log(`The Error: ${error}`);
 });
