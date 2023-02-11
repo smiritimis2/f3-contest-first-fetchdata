@@ -1,7 +1,6 @@
 let mains=document.getElementsByTagName("main");
 let major=document.getElementById("apidata");
-let tb=document.getElementById("row");
-let bd=document.getElementsByTagName("body");//fetching data from url
+//fetching data from url
 fetch('https://dummyjson.com/products').then((apidata)=>{
 console.log(apidata);
 
@@ -19,9 +18,9 @@ return apidata.json();
         const mydata=actualdata.products[k];
       
          
-   const cr=document.createElement("div");
+   const sk=document.createElement("div");
        ////giving details such ad price, stocks ,ratings images
-      cr.innerHTML=`
+      sk.innerHTML=`
       
       <img src=${mydata.images[0]} height="200" width="200" alt="photo" border="1px solid black" box-sizing="border-box"  justifyContent="space-between" />    
      <br>
@@ -45,21 +44,20 @@ return apidata.json();
 Rating -${mydata.rating}
       
       `
-    //  cr.style.display="flex";
-     ///cr.style.flexDirection="row";
-      cr.style.height="400px";
-      cr.style.width="200px";
-      cr.style.borderStyle="solid";
-    //cr.style.boxSizing="border-box";
-    cr.style.borderRadius="5px";
-    cr.style.borderColor="black"
-    cr.style.display="block";
-     // cr.style.box-sizing="border-box";
+   
+      sk.style.height="400px";
+      sk.style.width="200px";
+      sk.style.borderStyle="solid";
+   
+    sk.style.borderRadius="5px";
+    sk.style.borderColor="black"
+    sk.style.display="block";
+     
      
 
        
-    //mains.append(cr);
-    major.append(cr);
+    //mains.append(sk);
+    major.append(sk);
     //content.style.display="flex";//using flex wrap properties
     major.style.flexWrap="wrap";
     major.style.flexDirection="column";
