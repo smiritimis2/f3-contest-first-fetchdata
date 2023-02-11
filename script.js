@@ -1,17 +1,17 @@
 let mains=document.getElementsByTagName("main");
 let major=document.getElementById("apidata");
 let tb=document.getElementById("row");
-let bd=document.getElementsByTagName("body");
+let bd=document.getElementsByTagName("body");//fetching data from url
 fetch('https://dummyjson.com/products').then((apidata)=>{
 console.log(apidata);
 
 return apidata.json();
 
 }).then((actualdata)=>{
-
+//handling promises
     console.log(actualdata);
 
-      
+      //iterarting and renderering over each element 
       for(let k=0;k<30;k++)
       {
        
@@ -20,7 +20,7 @@ return apidata.json();
       
          
    const cr=document.createElement("div");
-       
+       ////giving details such ad price, stocks ,ratings images
       cr.innerHTML=`
       
       <img src=${mydata.images[0]} height="200" width="200" alt="photo" border="1px solid black" box-sizing="border-box"  justifyContent="space-between" />    
@@ -60,7 +60,7 @@ Rating -${mydata.rating}
        
     //mains.append(cr);
     major.append(cr);
-    //content.style.display="flex";
+    //content.style.display="flex";//using flex wrap properties
     major.style.flexWrap="wrap";
     major.style.flexDirection="column";
   major.style.justifyContent="space-evenly";
@@ -87,7 +87,7 @@ Rating -${mydata.rating}
      
 
 }).catch((error)=>{
-
+//hadling errors
 
     console.log(`The Error: ${error}`);
 });
