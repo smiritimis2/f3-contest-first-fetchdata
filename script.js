@@ -63,23 +63,7 @@ Rating -${mydata.rating}
     major.style.flexDirection="column";
   major.style.justifyContent="space-evenly";
 
-    //SVGTextContentElement.
-  //content.style.flexDirection="";
-    
-    
   
-
- // mr.append(content);
-  //mr.style.display="flex";
-  //mr.style.flexDirection="column";*/
-  
-  //bd.append(content);
-  //bd.style.display="flex";
-  //bd.style.flexDirection="column";
-  //mains.append(content);
-  //mains.display*/
-  //.style.display="flex"; 
-  //mains.style.flexDirection="row";
 
 }
      
